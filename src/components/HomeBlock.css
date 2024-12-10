@@ -1,0 +1,126 @@
+/* 页面整体布局 */
+.home-block {
+  height: 100vh; /* 占满整个页面高度 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 上半部分 */
+.upper-section {
+  height: 55%; /* 广告区域稍微扩大 */
+  background-color: #f9f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(68, 68, 68);
+  color:rgb(236, 232, 232);
+}
+
+/*search par*/
+.search-bar {
+  width: 20%; /* 搜索框的宽度（占页面宽度的百分比） */
+  padding: 8px;
+  border-radius: 5px;
+  border: 100%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.ad-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex: 1; /* 广告区域自动填充上半部分 */
+  background-color: #f4f4f4;
+  padding: 20px; /* 广告区域内的边距 */
+  text-align: center;
+}
+
+.ad-content img {
+  width: 30%; /* 广告图片的宽度（相对于父容器宽度） */
+  max-height: 45%; /* 广告图片的最大高度 */
+  justify-content: center;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: 30%; /* 确保父容器占满宽度 */
+  height: auto; /* 自适应高度 */
+}
+
+
+/* 广告按钮 */
+.ad-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(68, 68, 68);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* 确保箭头层级最高 */
+}
+
+.ad-btn:hover {
+  background-color: #929292;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+
+/* 下半部分 */
+.lower-section {
+  height: 45%; /* 调整书籍部分占比 */
+  overflow-x: auto; /* 横向滚动条 */
+  padding: 20px;
+  background-color: white;
+}
+
+.book-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap; /* 强制横向排列 */
+}
+
+/*图片*/
+
+.ad-image {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%; /* 防止图片溢出容器 */
+  height: auto; /* 保持图片比例 */
+}
+
+.add-review-btn {
+  background-color: #3c3a3a; /* 黑灰色背景 */
+  color: #fff; /* 白色文字 */
+  padding: 10px 20px; /* 内边距 */
+  border: none; /* 移除边框 */
+  border-radius: 5px; /* 圆角 */
+  cursor: pointer; /* 鼠标样式 */
+  transition: transform 0.2s ease, background-color 0.2s ease; /* 添加浮动和背景渐变效果 */
+}
+
+.add-review-btn:hover {
+  transform: translateY(-3px); /* 浮动效果 */
+  background-color: #2d2b2b; /* 悬停时更深的黑灰色 */
+}
